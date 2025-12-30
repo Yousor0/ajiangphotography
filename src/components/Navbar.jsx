@@ -155,7 +155,7 @@ export default function Navbar() {
       </AnimatePresence>
 
       {/* Desktop Navbar */}
-      <div className="hidden sm:flex self-end text-md md:text-lg lg:text-xl ml-auto space-x-2">
+      <div className="hidden sm:flex self-end text-md md:text-lg lg:text-xl ml-auto space-x-2 mb-1">
         <Button
           text="LATEST"
           to="/latestworks"
@@ -181,7 +181,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute -left-1 px-2 pt-3 pb-1 gap-2 bg-[#F4F4F4] shadow-md w-48 z-50 flex flex-col items-start"
+                className="absolute -left-1 px-2 pt-3 pb-1 gap-2 bg-[#FFF] shadow-md w-48 z-50 flex flex-col items-start border border-black/10"
               >
                 <Button text="SOLOS" to="/gradsolos" className="pl-4 pr-6 " />
                 <Button text="GROUPS" to="/gradgroups" className="pl-4 pr-6 " />

@@ -38,7 +38,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 order-1 sm:order-2 font-bold text-xs tracking-widest uppercase">
               <div className="flex flex-col sm:flex-row gap-5">
                 <Button
-                  text="enter"
+                  text="PORTFOLIO"
                   to="/latestworks"
                   variant="secondary"
                   className="w-full sm:w-auto"
@@ -50,7 +50,7 @@ export default function Home() {
                   className="w-full sm:w-auto"
                 />
                 <Button
-                  text="book grad shoot"
+                  text="BOOKINGS"
                   to="https://docs.google.com/forms/d/e/1FAIpQLSe8jOcEl5WAM-jesO81huukRSyQPOQM3gg4HE3nDGhFPhljzA/viewform"
                   variant="secondary"
                   external={true}
