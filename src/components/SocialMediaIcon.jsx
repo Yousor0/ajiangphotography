@@ -6,7 +6,6 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { href } from "react-router";
 
 export default function SocialMediaIcon({ className = "" }) {
   const [hovered, setHovered] = useState(null);
@@ -35,9 +34,7 @@ export default function SocialMediaIcon({ className = "" }) {
   ];
 
   return (
-    <div
-      className={`flex gap-3 text-3xl sm:text-3xl order-2 sm:order-1 ${className}`}
-    >
+    <div className={`flex gap-3 text-2xl order-2 sm:order-1 ${className}`}>
       {icons.map(({ id, href, icon }) => (
         <motion.a
           key={id}

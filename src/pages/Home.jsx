@@ -17,19 +17,28 @@ export default function Home() {
           className="gap-5 mx-auto w-full max-w-7xl flex flex-col px-6 py-8 sm:px-10 sm:py-12 lg:px-24 lg:py-20"
         >
           {/* Title */}
-          <div className="flex flex-1 flex-col items-center sm:items-start justify-center text-center sm:text-left gap-5">
+          <div className="flex flex-1 flex-col items-center sm:items-start justify-center text-center sm:text-left gap-5 -mb-2">
             <FloatIn>
-              <h1 className="uppercase tracking-wider font-extrabold text-6xl sm:text-7xl md:text-8xl lg:text-9xl ease-in-out">
-                <AnimatedLetters
-                  text="Andrew Jiang"
-                  hoverY={-6}
-                  className="ease-in-out "
-                />
+              <h1 className="uppercase font-extrabold text-7xl sm:text-7xl md:text-8xl lg:text-9xl ease-in-out leading-tight -mb-5">
+                <span className="block sm:inline sm:ml-4 -mb-5">
+                  <AnimatedLetters
+                    text="Andrew"
+                    hoverY={-6}
+                    className="ease-in-out"
+                  />
+                </span>
+                <span className="block sm:inline sm:ml-4 ">
+                  <AnimatedLetters
+                    text="Jiang"
+                    hoverY={-6}
+                    className="ease-in-out "
+                  />
+                </span>
               </h1>
             </FloatIn>
           </div>
 
-          <div class="hidden sm:block h-px my-2 border opacity-20 "></div>
+          <div className="hidden sm:block h-px border-b opacity-30"></div>
 
           {/* Bottom Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-8 ">
@@ -38,7 +47,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 order-1 sm:order-2 font-bold text-xs tracking-widest uppercase">
               <div className="flex flex-col sm:flex-row gap-5">
                 <Button
-                  text="PORTFOLIO"
+                  text="portfolio"
                   to="/latestworks"
                   variant="secondary"
                   className="w-full sm:w-auto"
@@ -47,14 +56,7 @@ export default function Home() {
                   text="contact"
                   to="/contact"
                   variant="secondary"
-                  className="w-full sm:w-auto"
-                />
-                <Button
-                  text="BOOKINGS"
-                  to="https://docs.google.com/forms/d/e/1FAIpQLSe8jOcEl5WAM-jesO81huukRSyQPOQM3gg4HE3nDGhFPhljzA/viewform"
-                  variant="secondary"
-                  external={true}
-                  className="w-full sm:w-auto whitespace-nowrap"
+                  className="w-full sm:w-auto "
                 />
               </div>
             </div>

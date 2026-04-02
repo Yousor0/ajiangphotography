@@ -26,14 +26,14 @@ export default function Navbar() {
       <div className={"sm:hidden flex justify-stretch w-full mb-2"}>
         <motion.button
           onClick={() => setOpen(!open)}
-          className="w-full flex items-center justify-center text-xl font-bold uppercase z-50 text-[#545454] hover:text-[#000] duration-300 ease-in-out "
+          className="w-full flex items-center justify-center text-xl font-bold uppercase z-50 text-[#545454] hover:text-black duration-300 ease-in-out "
         >
           <AnimatePresence>
             {open ? (
               <motion.span
                 key="close"
                 whileHover={{ scale: 1.05, y: -3 }}
-                whileTap={{ scale: 0.95, y: 2 }}
+                whileTap={{ scale: 1 }}
                 initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 5 }}
@@ -46,7 +46,7 @@ export default function Navbar() {
               <motion.span
                 key="close"
                 whileHover={{ scale: 1.05, y: -3 }}
-                whileTap={{ scale: 0.95, y: 2 }}
+                whileTap={{ scale: 1 }}
                 initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 5 }}
@@ -181,10 +181,18 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute -left-1 px-2 pt-3 pb-1 gap-2 bg-[#FFF] shadow-md w-48 z-50 flex flex-col items-start border border-black/10"
+                className="absolute -left-1 px-2 pt-2 pb-1 gap-1 bg-[#FFF] shadow-md w-48 z-50 flex flex-col items-start border border-black/10 "
               >
-                <Button text="SOLOS" to="/gradsolos" className="pl-4 pr-6 " />
-                <Button text="GROUPS" to="/gradgroups" className="pl-4 pr-6 " />
+                <Button
+                  text="SOLOS"
+                  to="/gradsolos"
+                  className="pl-3 pr-6 text-left"
+                />
+                <Button
+                  text="GROUPS"
+                  to="/gradgroups"
+                  className="pl-3 pr-6 text-left "
+                />
               </motion.div>
             )}
           </AnimatePresence>

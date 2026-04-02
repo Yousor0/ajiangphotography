@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ImageCarousel() {
-  const images = [bgImage1, bgImage2];
+  const images = [bgImage1, bgImage2]; // change to storage retrieval and image name as string arr
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Cycle through images every 5 seconds
