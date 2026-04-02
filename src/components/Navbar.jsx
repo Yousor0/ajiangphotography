@@ -10,7 +10,8 @@ export default function Navbar() {
 
   const isLatest = location.pathname === "/latestworks";
   const isGraduation =
-    location.pathname === "/gradgroups" || location.pathname === "/gradsolos";
+    location.pathname === "/graduation/groups" ||
+    location.pathname === "/graduation/groups";
   const isPeople = location.pathname === "/people";
   const isTravel = location.pathname === "/travel";
   const isAbout = location.pathname === "/about";
@@ -105,12 +106,12 @@ export default function Navbar() {
                     <div className="px-4">
                       <Button
                         text="SOLOS"
-                        to="/gradsolos"
+                        to="/graduation/solos"
                         className="flex items-center justify-center py-1 mt-2"
                       />
                       <Button
                         text="GROUPS"
-                        to="/gradgroups"
+                        to="/graduation/groups"
                         className="flex items-center justify-center py-1 my-1"
                       />
                     </div>
@@ -185,12 +186,12 @@ export default function Navbar() {
               >
                 <Button
                   text="SOLOS"
-                  to="/gradsolos"
+                  to="/graduation/solos"
                   className="pl-3 pr-6 text-left"
                 />
                 <Button
                   text="GROUPS"
-                  to="/gradgroups"
+                  to="/graduation/groups"
                   className="pl-3 pr-6 text-left "
                 />
               </motion.div>

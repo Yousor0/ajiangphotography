@@ -25,3 +25,5 @@ dist-ssr
 ._*
 /src/assets/Gallery/
 
+# env files
+.env

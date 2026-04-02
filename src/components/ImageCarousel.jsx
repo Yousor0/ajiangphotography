@@ -1,25 +1,30 @@
-import bgImage1 from "../assets/Home Gallery/DSC02225.jpg";
-import bgImage2 from "../assets/Home Gallery/DSC02383.jpg";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getImagesFromFolder } from "../lib/s3";
 
 export default function ImageCarousel() {
-  const images = [bgImage1, bgImage2]; // change to storage retrieval and image name as string arr
+  const [images, setImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Get Images from AWS
+  useEffect(() => {
+    getImagesFromFolder("home-carousel").then(setImages);
+  }, []);
 
   // Cycle through images every 5 seconds
   useEffect(() => {
+    if (images.length === 0) return;
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
     }, 5000);
 
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const backgroundImage = images[currentImageIndex];
+  if (images.length === 0) return null;
 
   return (
-    <div className="opacity-20">
+    <div className="opacity-50">
       <AnimatePresence>
         <motion.img
           key={currentImageIndex}
@@ -29,7 +34,7 @@ export default function ImageCarousel() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute top-0 left-0 w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover blur-xs"
         ></motion.img>
       </AnimatePresence>
     </div>

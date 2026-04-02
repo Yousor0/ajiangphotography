@@ -4,10 +4,10 @@ import GridImage from "./GridImage";
 
 function useColumnCount() {
   const getColumns = () => {
-    if (window.innerWidth >= 1536) return 5;
-    if (window.innerWidth >= 1280) return 4;
-    if (window.innerWidth >= 768) return 3;
-    if (window.innerWidth >= 640) return 2;
+    if (window.innerWidth >= 1536) return 4;
+    if (window.innerWidth >= 1280) return 3;
+    if (window.innerWidth >= 768) return 2;
+    if (window.innerWidth >= 640) return 1;
     return 1;
   };
 

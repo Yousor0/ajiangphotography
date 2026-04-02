@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex flex-1 flex-col items-center sm:items-start justify-center text-center sm:text-left gap-5 -mb-2">
             <FloatIn>
               <h1 className="uppercase font-extrabold text-7xl sm:text-7xl md:text-8xl lg:text-9xl ease-in-out leading-tight -mb-5">
-                <span className="block sm:inline sm:ml-4 -mb-5">
+                <span className="block sm:inline  -mb-5">
                   <AnimatedLetters
                     text="Andrew"
                     hoverY={-6}
