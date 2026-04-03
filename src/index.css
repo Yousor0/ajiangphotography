@@ -7,6 +7,11 @@
   user-select: none;
 }
 
+@font-face {
+  font-family: "dr-exclusive-editorial";
+  src: url(../src/font/dr-exclusive-editorial.ttf);
+}
+
 :root {
   font-family: "Nunito", sans-serif;
   line-height: 1.5;
@@ -37,4 +42,8 @@ h3 {
 
 .custom-scroll::-webkit-scrollbar-thumb {
   background-color: #d1d5db; /* Tailwind gray-300 */
+}
+
+strong {
+  font-weight: 700;
 }

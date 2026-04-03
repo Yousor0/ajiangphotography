@@ -11,19 +11,16 @@ export default function Header() {
   const prevScrollY = useRef(0); // Track previous scroll position
 
   useEffect(() => {
-    return scrollY.onChange((latest) => {
+    return scrollY.on("change", (latest) => {
       if (latest <= 0) {
         // Always visible at top
         setHidden(false);
-        setPaddingTop(100);
       } else if (latest > prevScrollY.current) {
         // Scrolling down
         setHidden(true);
-        setPaddingTop(40);
       } else {
         // Scrolling up
         setHidden(false);
-        setPaddingTop(40);
       }
       prevScrollY.current = latest;
     });
@@ -37,7 +34,6 @@ export default function Header() {
         position: "sticky",
         top: 0,
         zIndex: 100,
-        paddingTop: paddingTop,
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className="pt-15 sm:pt-25 pb-0 sm:pb-10 flex flex-col gap-3 bg-white left-0 w-full z-50 shadow-sm"

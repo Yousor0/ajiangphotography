@@ -1,6 +1,6 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import GroupMasonaryGrid from "../../components/GroupMasonaryGrid";
+import GroupMasonaryGrid from "../../components/Masonary Grid/GroupMasonaryGrid";
 import { getImagesFromSubfolder } from "../../lib/s3";
 import { useState, useEffect } from "react";
 
