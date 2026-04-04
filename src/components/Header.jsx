@@ -36,7 +36,7 @@ export default function Header() {
         zIndex: 100,
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="pt-15 sm:pt-25 pb-0 sm:pb-10 flex flex-col gap-3 bg-white left-0 w-full z-50 shadow-sm"
+      className="pt-10 sm:pt-15 pb-0 sm:pb-10 flex flex-col gap-3 bg-white left-0 w-full z-50 shadow-sm"
     >
       <div className="flex flex-col gap-1 sm:flex-wrap px-0 items-center sm:flex-row sm:items-end sm:px-20">
         <Link to="/">

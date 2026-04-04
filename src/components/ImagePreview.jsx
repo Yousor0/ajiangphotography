@@ -60,7 +60,7 @@ function OpenImage({ images, initialIndex, onClose }) {
       <img
         src={url}
         alt="Enlarged view"
-        className="max-h-[80vh] max-w-[90vw]  sm:max-w-[75vw] object-contain mx-auto "
+        className="max-h-[70vh] max-w-[90vw] sm:max-w-[75vw] object-contain mx-auto "
         onClick={(e) => e.stopPropagation()}
       />
 

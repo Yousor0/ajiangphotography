@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import GradSolos from "./pages/Graduation/GradSolos";
 import GradGroups from "./pages/Graduation/GradGroups";
+import GraduationAll from "./pages/Graduation/GraduationAll";
 
 import { Routes, Route } from "react-router";
 
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/latestworks" element={<LatestWorks />} />
+      <Route path="/graduation" element={<GraduationAll />} />
       <Route path="/graduation/solos" element={<GradSolos />} />
       <Route path="/graduation/groups" element={<GradGroups />} />
       <Route path="/people" element={<People />} />

@@ -17,6 +17,7 @@ export async function getImagesFromSubfolder(subfolder) {
   const items = manifest[folder] ?? [];
   return items
     .filter((item) => item.key.startsWith(subfolder + "/"))
+    .sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified))
     .map((item) => `${S3_BASE}/${item.key}`);
 }
 

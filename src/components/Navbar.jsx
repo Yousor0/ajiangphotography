@@ -86,7 +86,6 @@ export default function Navbar() {
               onClick={() => setGradClick((prev) => !prev)}
             >
               <div className="px-4">
-                {" "}
                 <Button
                   text="GRADUATION +"
                   variant={isGraduation ? "active" : "primary"}
@@ -104,6 +103,11 @@ export default function Navbar() {
                     className="gap-2 w-full overflow-hidden flex flex-col items-stretch sm:hidden bg-gray-200"
                   >
                     <div className="px-4">
+                      <Button
+                        text="ALL"
+                        to="/graduation"
+                        className="flex items-center justify-center py-1 mt-2"
+                      />
                       <Button
                         text="SOLOS"
                         to="/graduation/solos"
@@ -173,6 +177,7 @@ export default function Navbar() {
             text="GRADUATION"
             variant={isGraduation ? "active" : "primary"}
             className="pl-4 pr-6 "
+            to="/graduation"
           />
 
           <AnimatePresence>
