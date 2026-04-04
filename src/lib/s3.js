@@ -1,7 +1,7 @@
 const S3_BASE = import.meta.env.VITE_S3_BASE_URL;
 
 async function fetchManifest() {
-  const response = await fetch(`${S3_BASE}/manifest.json`);
+  const response = await fetch(`${S3_BASE}/manifest.json`, { cache: "no-store" });
   return response.json();
 }
 
