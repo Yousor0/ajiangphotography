@@ -14,7 +14,9 @@ This portfolio serves as both a professional showcase and a booking platform for
 
 **Deployment Link**: [https://andrewjiangphotos.com/](https://andrewjiangphotos.com/)
 
-![Watch the video](/content/Animation.gif)
+![Landing Page](/content/image.png)
+![Latest Works](/content/image2.png)
+![Image Preview](/content/image3.png)
 
 ## Tech Stack
 
