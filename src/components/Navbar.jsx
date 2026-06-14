@@ -17,6 +17,7 @@ export default function Navbar() {
   const isTravel = location.pathname === "/travel";
   const isAbout = location.pathname === "/about";
   const isContact = location.pathname === "/contact";
+  const isGraphics = location.pathname === "/creativeworks";
 
   const [open, setOpen] = useState(false);
   const [gradHover, setGradHover] = useState(false);
@@ -142,6 +143,14 @@ export default function Navbar() {
             </div>
             <div className="px-4">
               <Button
+                text="CREATIVE WORKS"
+                to="/creativeworks"
+                variant={isGraphics ? "active" : "primary"}
+                className="flex items-center justify-center py-1"
+              />
+            </div>
+            <div className="px-4">
+              <Button
                 text="ABOUT"
                 to="/about"
                 variant={isAbout ? "active" : "primary"}
@@ -228,6 +237,12 @@ export default function Navbar() {
           text="TRAVEL"
           to="/travel"
           variant={isTravel ? "active" : "primary"}
+          className="pl-4 pr-6 "
+        />
+        <Button
+          text="CREATIVE&nbsp;WORKS"
+          to="/creativeworks"
+          variant={isGraphics ? "active" : "primary"}
           className="pl-4 pr-6 "
         />
         <Button
