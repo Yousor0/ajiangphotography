@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
+import { getImagesFromFolder } from "../lib/s3";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MasonaryGrid from "../components/Masonary Grid/MasonaryGrid";
-import { getAllImages } from "../lib/s3";
 
-export default function LatestWorks() {
+export default function People() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    getAllImages(["home-carousel", "misc", "graphics"]).then(setImages);
+    getImagesFromFolder(["graphics"]).then(setImages);
   }, []);
 
   return (
